@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="HomeMart Furniture & Decor — warm, modern furniture shopping experience." />
+  <title>HomeMart — Furniture & Decor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="announcement">Free shipping on orders over ₹25,000 <span>•</span> Easy 7-day returns</div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="HomeMart home"><span class="brand-mark">⌂</span><span>Home<span>Mart</span></span></a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#products">Shop</a>
+      <a href="#products?category=Living%20Room">Living Room</a>
+      <a href="#products?category=Bedroom">Bedroom</a>
+      <a href="#products?category=Dining%20%26%20Kitchen">Dining</a>
+      <a href="#products?category=Office%20%26%20Decor">Office</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" data-action="search" title="Search">⌕</button>
+      <a class="icon-btn" href="#account" title="Account">♙</a>
+      <div id="auth-controls" class="auth-controls"></div>
+      <a class="cart-link" href="#cart" title="Shopping cart">🛒 <span id="cart-count">0</span></a>
+      <button class="menu-btn" data-action="menu">☰</button>
+    </div>
+  </header>
+  <div id="mobile-menu" class="mobile-menu hidden">
+    <a href="#home">Home</a><a href="#products">Shop All</a><a href="#products?category=Living%20Room">Living Room</a><a href="#products?category=Bedroom">Bedroom</a><a href="#products?category=Dining%20%26%20Kitchen">Dining & Kitchen</a><a href="#products?category=Office%20%26%20Decor">Office & Decor</a><a href="#account">My Account</a>
+  </div>
+
+  <main id="app"></main>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div><a class="brand footer-brand" href="#home"><span class="brand-mark">⌂</span><span>Home<span>Mart</span></span></a><p>Furniture and decor made for warm, comfortable homes.</p></div>
+      <div><h4>Shop</h4><a href="#products">All Products</a><a href="#products?category=Living%20Room">Living Room</a><a href="#products?category=Bedroom">Bedroom</a><a href="#products?category=Dining%20%26%20Kitchen">Dining & Kitchen</a></div>
+      <div><h4>Help</h4><a href="#about">About Us</a><a href="#contact">Contact Us</a><a href="#account">Orders & Account</a><a href="#checkout">Delivery & Returns</a></div>
+      <div><h4>Stay in the loop</h4><p>Get new collection updates and offers.</p><form id="newsletter-form" class="newsletter"><input type="email" placeholder="Email address" required><button class="btn">Subscribe</button></form></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 HomeMart Furniture & Decor</span><span>Built as a frontend internship project • No database required</span></div>
+  </footer>
+
+  <div id="toast" class="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
