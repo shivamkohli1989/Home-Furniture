@@ -1,0 +1,23 @@
+name: Deploy to Bunny.net Storage
+
+on:
+  push:
+    branches:
+      - main  # Change to 'master' if your default branch is master
+
+jobs:
+  web-deploy:
+    name: Restic Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code from GitHub
+        uses: actions/checkout@v4
+
+      - name: Sync files via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.BUNNY_FTP_SERVER }}
+          username: ${{ secrets.BUNNY_FTP_USERNAME }}
+          password: ${{ secrets.BUNNY_FTP_PASSWORD }}
+          # Optional: If you only want to deploy a specific build folder (like 'dist' or 'public'), specify it here:
+          # local-dir: ./
